@@ -1,0 +1,20 @@
+{
+	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
+	"create_window_at_startup": false,
+	"default_line_ending": "unix",
+	"draw_white_space": "all",
+	"font_size": 14.0,
+	"ignored_packages":
+	[
+		"Vintage",
+		"AAAPackageDev",
+		"Theme - Cobalt2",
+		"Elixir"
+	],
+	"open_files_in_new_window": false,
+	"preview_on_click": false,
+	"tab_size": 2,
+	"theme": "Soda Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
