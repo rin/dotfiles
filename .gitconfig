@@ -1,0 +1,40 @@
+[user]
+	name = Rin Raeuber
+	email = mail@rin-raeuber.com
+[color]
+	ui = auto
+[alias]
+  conflict = "!git status -s | grep ^UU | cut -f2 -d \" \" | xargs" $EDITOR
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  cam = commit -a -m
+  ci = commit
+  st = status
+  out = log --pretty=format:'%h... %ar %an %s' origin/master..master
+  in = log --pretty=format:'%h... %ar %an %s' ORIG_HEAD..HEAD
+  br = branch
+  co = checkout
+  df = diff
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit
+  who = shortlog -s --
+  fup = commit -a --amend -C HEAD
+  fupi = commit --amend -C HEAD
+	compactlog = log --pretty=format:\"%h%x09%an%x09%ad%x09%s\" --date=local
+	show-graph = log --graph --abbrev-commit --pretty=oneline
+[core]
+	excludesfile = /Users/rin/.gitignore
+	editor = subl -w
+[push]
+	default = tracking
+[pull]
+  rebase = true
+[branch]
+	autosetuprebase = always
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[credential]
+	helper = osxkeychain
